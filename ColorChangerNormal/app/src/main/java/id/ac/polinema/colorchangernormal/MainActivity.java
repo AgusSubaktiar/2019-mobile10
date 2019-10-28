@@ -2,6 +2,7 @@ package id.ac.polinema.colorchangernormal;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.graphics.Color;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 	private ConstraintLayout rootView;
 	private Button btnChangeColor;
 	ColorViewModel colorViewModel;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

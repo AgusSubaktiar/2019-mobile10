@@ -1,4 +1,4 @@
-package id.ac.polinema.skorbasket.viewmodels;
+package id.ac.polinema.colorchangernormal;
 
 import android.app.Application;
 
@@ -8,16 +8,13 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 public class SharedScore extends AndroidViewModel {
+    public SharedScore(@NonNull Application application) {
+        super(application);
+    }
     private MutableLiveData<Integer> scoreHome;
     private MutableLiveData<Integer> scoreVisitor;
     private MutableLiveData<Boolean> winner;
 
-    public SharedScore(@NonNull Application application) {
-        super(application);
-        scoreHome = new MutableLiveData<>();
-        scoreVisitor = new MutableLiveData<>();
-        winner = new MutableLiveData<>();
-    }
     public void setScoreHome(Integer score){
         scoreHome.setValue(score);
     }
